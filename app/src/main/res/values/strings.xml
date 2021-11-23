@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MQTT_client</string>
+    <string name="action_publish">Публикация</string>
+    <string name="action_sub">Подписка</string>
+    <string name="action_connect">Подключение</string>
+    <string name="action_disconnect">Отключение</string>
+</resources>

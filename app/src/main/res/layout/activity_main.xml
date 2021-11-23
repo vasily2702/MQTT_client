@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/design_default_color_primary_dark">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvConnect"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin = "16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Host" />
+
+                <EditText
+                    android:id="@+id/editTextHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="broker.mqttdashboard.com" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Port" />
+
+                <EditText
+                    android:id="@+id/editTextPort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1883" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ClientID" />
+
+                <EditText
+                    android:id="@+id/editTextClientID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="20dp">
+        <Button
+            android:id="@+id/buttonConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:text="Connection" />
+
+        <Button
+            android:id="@+id/btnGeneratClientID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="Generation" />
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/cvPublish"
+        android:visibility="gone"
+        android:layout_margin = "16dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/topicLab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Topic" />
+
+                    <EditText
+                        android:id="@+id/edTopic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/QoSLab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QoS" />
+
+                    <EditText
+                        android:id="@+id/edQoS"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvMessagesLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Messages" />
+
+                <EditText
+                    android:id="@+id/edMessages"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:padding="20dp">
+
+                <Button
+                    android:id="@+id/btnPublish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="120dp"
+                    android:text="Publish" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        android:visibility="gone"
+        android:id="@+id/cvSubscriptions"
+        app:cardCornerRadius="8dp"
+        android:layout_margin = "16dp">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/topicLabelSub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Topic" />
+
+            <EditText
+                android:id="@+id/edTopicSub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/QoSLabSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QoS" />
+
+            <EditText
+                android:id="@+id/edQoSSub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <ListView
+            android:id="@+id/listMes"
+            android:layout_width="match_parent"
+            android:layout_height="373dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btnSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="90dp"
+            android:text="Subscriptions" />
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+    </LinearLayout>
